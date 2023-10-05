@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Scraping Tool</title>
+    <style>
+        body {
+            background: linear-gradient(to bottom, #4e54c8, #8f94fb);
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            color: #000; /* Text color changed to black */
+        }
+
+        .container {
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+        }
+
+        h1 {
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+
+        label {
+            font-size: 18px;
+            margin-right: 10px;
+        }
+
+        input[type="text"],
+        input[type="number"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+
+        input[type="radio"] {
+            margin-right: 5px;
+        }
+
+        button {
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            padding: 10px 20px;
+            font-size: 18px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Web Scraping Tool</h1>
+        <form method="POST">
+            <label for="url">URL:</label>
+            <input type="text" id="url" name="url" required><br>
+
+            <label for="num_pages">Number of Pages:</label>
+            <input type="number" id="num_pages" name="num_pages" required><br>
+
+            <label for="file_name">File Name:</label>
+            <input type="text" id="file_name" name="file_name" required><br>
+
+            <label>Scraping Option:</label>
+            <input type="radio" id="rows_and_columns" name="scraping_option" value="rows_and_columns" required>
+            <label for="rows_and_columns">Rows and Columns</label>
+
+            <input type="radio" id="columns_only" name="scraping_option" value="columns_only" required>
+            <label for="columns_only">Columns Only</label><br><br>
+
+            <button type="submit">Scrape Data</button>
+        </form>
+    </div>
+</body>
+</html>
